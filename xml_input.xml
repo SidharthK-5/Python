@@ -1,0 +1,5 @@
+<Result success="false">
+    <Message>Cannot open remote file '/home/user/examplefile.txt'.</Message>
+    <Errorcode> 2 </Errorcode>
+    <Requestcode> 3 </Requestcode>
+</Result>
