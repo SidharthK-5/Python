@@ -7,5 +7,5 @@
 - Hackerrank exercises
 - Udemy course files
 - Coursera files
-- Deloitte onboarding training exercise
+- Deloitte onboarding training exercises
 - And some general ideas
