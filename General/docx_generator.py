@@ -37,6 +37,7 @@ records = (
     (3, '103', 'Mango')
 )
 
+document.add_heading("Sample Table", level=2)
 table = document.add_table(rows=1, cols=3)
 hdr_cells = table.rows[0].cells
 hdr_cells[0].text = 'Qty'
