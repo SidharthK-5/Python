@@ -1,3 +1,8 @@
+"""
+Enter the side lengths of a triangle in the descending order
+to check if it is right angled or not
+"""
+
 def main():
     a = int(input())
     b = int(input())

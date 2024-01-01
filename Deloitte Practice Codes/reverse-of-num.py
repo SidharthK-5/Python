@@ -1,15 +1,28 @@
-def intreverse(n):
-    #your code here
-    if n>0:
-        ret = int(str(n)[::-1])
+"""
+Prints the reverse of the given number
+"""
+
+def reverse_integer(number: int) -> int | str:
+    """
+    Returns the reverse of a positive integer
+
+    Args:
+        number (int): a positive integer
+
+    Returns:
+        int | str: reverse of the number
+    """
+    if number>0:
+        ret = int(str(number)[::-1])
     else:
         ret = "Invalid Input"
     
-    #return the reversed number
+    # Return the reversed number
     return ret
     
 
-#read a number
-n = int(input())
-# call the function and display the result
-print(intreverse(n))
+# Read a number
+number = int(input())
+
+# Call the function and display the result
+print(reverse_integer(number))

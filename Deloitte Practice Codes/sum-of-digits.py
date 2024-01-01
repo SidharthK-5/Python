@@ -1,10 +1,19 @@
-def SumOfDigits(n):
-    #write the function body here
-    n = str(n)
-    l = list(map(int, n))
-    print(sum(l))
+"""
+Prints the sum of digits of a number
+"""
+
+def sum_of_digits(number: int) -> None:
+    """
+    Prints the sum of digits of the given number
+
+    Args:
+        number (int): a positive integer
+    """
+    number = str(number)
+    digits = list(map(int, number))
+    print(sum(digits))
     
     
-#call the function here
-n = int(input())
-SumOfDigits(n)
+# Function call
+number = int(input())
+sum_of_digits(number)
