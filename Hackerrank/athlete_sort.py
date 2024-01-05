@@ -1,4 +1,7 @@
-""" Question: Sort a 2D list based on k'th index of the sub lists"""
+"""
+Question: Sort a 2D list based on k'th index of the sub lists
+In the final result, the sub lists will be sorted in the outer list based on k'th index position of sub lists
+"""
 
 from operator import itemgetter
 

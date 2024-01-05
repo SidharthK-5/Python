@@ -1,3 +1,7 @@
+"""
+Basic python class demo
+"""
+
 class Building:
     def __init__(self, color: str, no_of_floors: int):
         self.color = color
