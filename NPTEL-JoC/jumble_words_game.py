@@ -6,8 +6,17 @@ import random
 
 
 words = [
-    'rainbow', 'computer', 'programming', 'mathematics','player', 'condition', 'reverse', 'water', 'board'
+    "rainbow",
+    "computer",
+    "programming",
+    "mathematics",
+    "player",
+    "condition",
+    "reverse",
+    "water",
+    "board",
 ]
+
 
 def choose() -> str:
     """
@@ -31,11 +40,16 @@ def jumble(word: str) -> str:
         str: the jumbled word
     """
     word_length = len(word)
-    jumbled = ''.join(random.sample(word, word_length))
+    jumbled = "".join(random.sample(word, word_length))
     return jumbled
 
 
-def thank(player_one_name: str, player_two_name: str, player_one_score: int, player_two_score: int) -> str:
+def thank(
+    player_one_name: str,
+    player_two_name: str,
+    player_one_score: int,
+    player_two_score: int,
+) -> str:
     """
     Creates a thanks message after game completion
 
@@ -51,7 +65,7 @@ def thank(player_one_name: str, player_two_name: str, player_one_score: int, pla
     player_one_msg = f"{player_one_name}, your score is: {player_one_score}"
     player_two_msg = f"{player_two_name}, your score is: {player_two_score}"
     greeting_msg = "Thanks for playing \nHave a nice day!!"
-    final_msg = player_one_msg + '\n' + player_two_msg + '\n' + greeting_msg
+    final_msg = player_one_msg + "\n" + player_two_msg + "\n" + greeting_msg
     return final_msg
 
 
@@ -74,9 +88,9 @@ def one_turn(player_name: str, player_score: int, answer: str) -> int:
         print(f"You guessed it right!! Your score: {player_score}")
     else:
         print(f"Wrong guess :(. Actual answer is: {answer}")
-        
+
     return player_score
-    
+
 
 def play():
     # Receive player names from input
@@ -85,36 +99,58 @@ def play():
     # Initializing players' scores to zero
     player_one_score = 0
     player_two_score = 0
-    
-    turn = 0 # keeps track of which player is having the current turn
+
+    turn = 0  # keeps track of which player is having the current turn
     while True:
         # Logic to generate jumbled word for the player
         picked_word = choose()
         question = jumble(word=picked_word)
         print(f"\nJumbled question word: {question}")
-        
+
         # If turn is even, player 1 plays, else player 2
         if turn % 2 == 0:
-            player_one_score = one_turn(player_name=player_one_name, player_score=player_one_score, answer=picked_word)
+            player_one_score = one_turn(
+                player_name=player_one_name,
+                player_score=player_one_score,
+                answer=picked_word,
+            )
             game_control = input("\nDo you want to continue ([y]/n): ")
-            
+
             # Stop the game as per current player's choice
-            if game_control.lower() == 'n':
-                print(thank(player_one_name, player_two_name, player_one_score, player_two_score))
+            if game_control.lower() == "n":
+                print(
+                    thank(
+                        player_one_name,
+                        player_two_name,
+                        player_one_score,
+                        player_two_score,
+                    )
+                )
                 break
-            
+
         else:
-            player_two_score = one_turn(player_name=player_two_name, player_score=player_two_score, answer=picked_word)
+            player_two_score = one_turn(
+                player_name=player_two_name,
+                player_score=player_two_score,
+                answer=picked_word,
+            )
             game_control = input("\nDo you want to continue ([y]/n): ")
-            
+
             # Stop the game as per current player's choice
-            if game_control.lower() == 'n':
-                print(thank(player_one_name, player_two_name, player_one_score, player_two_score))
+            if game_control.lower() == "n":
+                print(
+                    thank(
+                        player_one_name,
+                        player_two_name,
+                        player_one_score,
+                        player_two_score,
+                    )
+                )
                 break
-        
+
         # update value of turn
         turn += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     play()

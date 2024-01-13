@@ -1,5 +1,6 @@
-#import email.utils
+# import email.utils
 import re
+
 mail = "^[<][a-zA-Z][a-zA-Z0-9\.-_]+[@][a-z]+[a-z]{1,3}[>]$"
 
 n = int(input())
@@ -11,6 +12,5 @@ for i in range(n):
 for k, v in d.items():
     # if email.utils.formataddr((k, v)):
     #     print(k, v)
-    if re.match(mail,v):
-        print(k,v)
-
+    if re.match(mail, v):
+        print(k, v)

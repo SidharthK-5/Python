@@ -21,16 +21,16 @@ def make_random_list(min: int, max: int, num_elements: int) -> list[int]:
     random_list = []
     for i in range(num_elements):
         random_list.append(random.randint(min, max))
-    
+
     return random_list
 
 
 estimates = [350, 355, 360, 365, 380, 385, 390, 395, 398, 400]
-results = make_random_list(1,10,10)
+results = make_random_list(1, 10, 10)
 
-plt.plot(estimates, results, 'r--')
-plt.plot([statistics.mean(estimates)], [5], 'go') # Green circle label for mean
-plt.plot([statistics.median(estimates)], [5], 'bs') # Blue sqaure label for mean
+plt.plot(estimates, results, "r--")
+plt.plot([statistics.mean(estimates)], [5], "go")  # Green circle label for mean
+plt.plot([statistics.median(estimates)], [5], "bs")  # Blue sqaure label for mean
 # Setting plot title and labels
 plt.title(label="Statistical Plot")
 plt.xlabel("X-axis label")

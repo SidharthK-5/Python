@@ -2,6 +2,7 @@
 From the input a string, create a dictionary of alphabets in the string and their count
 """
 
+
 def count_alphabets(string_input: str) -> dict:
     """
     Create a dictionary of alphabets in the string and their count
@@ -19,9 +20,10 @@ def count_alphabets(string_input: str) -> dict:
             alphabet_dict[letter] += 1
         else:
             alphabet_dict[letter] = 1
-    
+
     # Return dictionary object
     return alphabet_dict
+
 
 # Read the string input
 string_input = input()

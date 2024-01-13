@@ -4,15 +4,15 @@ N = int(input())
 op_list = []
 
 for i in range(N):
-    e = input().split(' ')
+    e = input().split(" ")
     op_list.append(e)
 
 for i in range(N):
-    if op_list[i][0] == 'pop':
+    if op_list[i][0] == "pop":
         s.pop()
-    elif op_list[i][0] == 'remove':
+    elif op_list[i][0] == "remove":
         s.remove(int(op_list[i][1]))
-    elif op_list[i][0] == 'discard':
+    elif op_list[i][0] == "discard":
         s.discard(int(op_list[i][1]))
 
 print(sum(s))

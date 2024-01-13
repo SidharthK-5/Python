@@ -4,21 +4,21 @@
 
 from collections import defaultdict
 
-d = defaultdict(list) # This defaultdict will store lists A and B
+d = defaultdict(list)  # This defaultdict will store lists A and B
 n, m = map(int, input().split())
 
 for _ in range(n):
-    d['A'].append(input()) # Elements of key A
+    d["A"].append(input())  # Elements of key A
 for _ in range(m):
-    d['B'].append(input()) # Elements of key A
+    d["B"].append(input())  # Elements of key A
 
-for i in d['B']: # To check for every element in B
+for i in d["B"]:  # To check for every element in B
     flag = 0
-    for j in range(len(d['A'])):
-        if d['A'][j] == i: # Match is found, position is printed
+    for j in range(len(d["A"])):
+        if d["A"][j] == i:  # Match is found, position is printed
             flag = 1
-            print(j+1, end=' ')
-    
-    if flag == 0: # When the particular 'i' is not found in key A
-        print(-1, end=' ')
+            print(j + 1, end=" ")
+
+    if flag == 0:  # When the particular 'i' is not found in key A
+        print(-1, end=" ")
     print()

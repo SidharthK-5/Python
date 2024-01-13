@@ -40,17 +40,17 @@ regex = '(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]{6,})' # atleast one lowercase, one upp
 s = "ABCDE1234A"
 r = re.compile("^[A-Z]{5}[0-9]{4}[A-Z]$")
 # ^ to specify start ans $ to specify end else findall will grab strings which have 'r' as substrings
-l = re.findall(r,s)
+l = re.findall(r, s)
 print(l)
 
 # Checking phone no
 s = "7012310580"
 r = re.compile("^[6-9][0-9]{9}$")
-l = re.findall(r,s)
+l = re.findall(r, s)
 print(l)
 
 # Checking date format
 s = "05/07/2022"
 r = re.compile("^[0-9]{2}/[0-9]{2}/[0-9]{4}$")
-l = re.findall(r,s)
+l = re.findall(r, s)
 print(l)

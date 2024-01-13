@@ -3,7 +3,9 @@ import sqlite3
 connection = sqlite3.connect("example1.db")
 c = connection.cursor()
 
-c.execute("""CREATE TABLE IF NOT EXISTS EMP(ID INT PRIMARY KEY,NAME TEXT,SALARY REAL)""")
+c.execute(
+    """CREATE TABLE IF NOT EXISTS EMP(ID INT PRIMARY KEY,NAME TEXT,SALARY REAL)"""
+)
 
 """All statements should be commented once it is run successfully"""
 

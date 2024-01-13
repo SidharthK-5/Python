@@ -3,6 +3,7 @@ Enter a limit number. Enter those many numbers in subsequent lines
 The result will be PRIME or COMPOSITE in the order of numbers input
 """
 
+
 def is_prime(number: int) -> str:
     """
     Checks if the given number is prime or composite
@@ -14,11 +15,13 @@ def is_prime(number: int) -> str:
     Returns:
         str: Whether the number is prime or composite
     """
-    if number<2 or number>1000:
+    if number < 2 or number > 1000:
         return "Out of Range"
     else:
-        flag = 0 # Says if the variable is PRIME or COMPOSITE (0 => PRIME, 1 => COMPOSITE)
-        for divisor in range(2, number//2 + 1):
+        flag = (
+            0  # Says if the variable is PRIME or COMPOSITE (0 => PRIME, 1 => COMPOSITE)
+        )
+        for divisor in range(2, number // 2 + 1):
             if number % divisor == 0:
                 flag = 1
                 break
@@ -26,6 +29,7 @@ def is_prime(number: int) -> str:
             return "COMPOSITE"
         else:
             return "PRIME"
+
 
 total_numbers = int(input())
 number_list = []

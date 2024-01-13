@@ -1,8 +1,8 @@
-A = set(map(int, input().split())) #Superset
-n = int(input()) # no of test cases
-S = [] # list of subsets
+A = set(map(int, input().split()))  # Superset
+n = int(input())  # no of test cases
+S = []  # list of subsets
 for i in range(n):
-    #Entering subsets row by row
+    # Entering subsets row by row
     r = set(map(int, input().split()))
     S.append(r)
 
@@ -15,7 +15,7 @@ for i in range(n):
         flag = 0
         break
 
-if(flag == 1):
+if flag == 1:
     print(True)
 else:
     print(False)

@@ -5,18 +5,18 @@ import datetime
 from cowin_utilis import *
 
 sel = input("Use Default ? (Default = Port Blair) y or n ? : ")
-if sel == 'y':
+if sel == "y":
     dist_id = 2
-    date_par = datetime.datetime.today().strftime('%d-%m-%Y')
+    date_par = datetime.datetime.today().strftime("%d-%m-%Y")
 else:
     dist_id = input("Enter District ID \n or p to search by PIN : ")
-    if dist_id == 'p' : pin = input("Enter PIN code: ")
-    
+    if dist_id == "p":
+        pin = input("Enter PIN code: ")
+
     date_par = input("Enter Date as dd-mm-yyyy or t for today: ")
 
-
-    if date_par == 't':
-        date_par = datetime.datetime.today().strftime('%d-%m-%Y')
+    if date_par == "t":
+        date_par = datetime.datetime.today().strftime("%d-%m-%Y")
 
     elif len(date_par) != 10:
         print("Inalid date format")
@@ -26,8 +26,8 @@ else:
         mm = date_par[3:5]
         yy = date_par[6:]
 
-    if dist_id == 'p': 
-        by_pin(pin,date_par)
+    if dist_id == "p":
+        by_pin(pin, date_par)
         sys.exit()
 
     try:
@@ -36,7 +36,6 @@ else:
         print("Enter valid ID")
         sys.exit()
 
-by_id(dist_id,date_par)
+by_id(dist_id, date_par)
 
-#by Shino Winson
-
+# by Shino Winson

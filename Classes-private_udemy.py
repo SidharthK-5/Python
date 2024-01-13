@@ -6,37 +6,43 @@ class Account:
     @classmethod
     def incr_count(cls):
         cls.count += 1
+
     @classmethod
     def get_count(cls):
         return cls.count
-    
+
     # Static method - Here, cls variable and instance variables are not accessed
     @staticmethod
     def Print_val():
         print("Static method call")
-    
-    def __init__(self, cust_id, name, initial_balance = 0):
+
+    def __init__(self, cust_id, name, initial_balance=0):
         self.__id = cust_id
         self.__name = name
         self.__balance = initial_balance
-        #Account.count += 1
+        # Account.count += 1
         Account.incr_count()
-    
+
     def get_id(self):
         return self.__id
+
     def get_name(self):
         return self.__name
+
     def get_balance(self):
         return self.__balance
+
     def deposite(self, amount):
         self.__balance += amount
         return self.__balance
+
     def withdraw(self, amount):
         if amount > self.__balance:
             return "Insufficient balance"
         else:
             self.__balance -= amount
             return self.__balance
+
 
 customer1 = Account("101", "ABC")
 

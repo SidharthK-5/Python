@@ -1,4 +1,4 @@
-text = 'I have called the service desk 100 times and nobody replies to me. I need a conversation ASAP!! My number is 111-1234567! My other number is 7654321!'
+text = "I have called the service desk 100 times and nobody replies to me. I need a conversation ASAP!! My number is 111-1234567! My other number is 7654321!"
 # result = re.findall('111-1234567', text) # When we fully know what to look
 # print(result)
 # result = re.findall("\d",text) # select all digits

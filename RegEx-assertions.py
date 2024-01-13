@@ -6,7 +6,7 @@ import re
 
 # +ve lookahead for a set of alnum (\w+) which is a first group
 # Lookahead is such that there is atleast one char gap (\w+) between 1st group and match
-print(re.search(r'(\w+)(?=\w+\1)', "geeksforgeeks").group())
+print(re.search(r"(\w+)(?=\w+\1)", "geeksforgeeks").group())
 
 # -ve lookahead is used to avoid repitition of same group with some character interval
-print(re.search(r'(geeks)(?!\w+\1)', "geeksforgeeks").group())
+print(re.search(r"(geeks)(?!\w+\1)", "geeksforgeeks").group())

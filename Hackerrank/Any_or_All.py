@@ -9,4 +9,4 @@ N = int(input())
 input_list = list(map(str, input().split()))
 # The inner all() will check if all elements are +ve and any() will check if atleast one is palindrome.
 # These two results are treated as elemtents for the outer all(), so as to combine the decision
-print(all([all(i>'0' for i in input_list), any(i == i[::-1] for i in input_list)]))
+print(all([all(i > "0" for i in input_list), any(i == i[::-1] for i in input_list)]))

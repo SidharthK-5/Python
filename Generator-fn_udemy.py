@@ -7,17 +7,20 @@ def fibo():
     yield first
     second = 1
     yield second
-    while(True):
+    while True:
         next = first + second
         yield next
-        first,second = second,next
+        first, second = second, next
 
-g = fibo()    
+
+g = fibo()
 for i in range(10):
     print(next(g))
 
 # Generator concept in comprehension
-l = [10,20,30,40,50]
-l2 = (value**2 for value in l) # Giving () instead of [] will create a generator object l2
+l = [10, 20, 30, 40, 50]
+l2 = (
+    value ** 2 for value in l
+)  # Giving () instead of [] will create a generator object l2
 for i in range(len(l)):
     print(next(l2))

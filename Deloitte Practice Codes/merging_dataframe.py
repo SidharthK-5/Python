@@ -14,7 +14,7 @@ first, second = map(str, input().split())
 # n => how many elements are needed, pos => from which end 'n' elements are needed
 n, pos = map(int, input().split())
 
-list1 = np.arange(start, end+1, step)
+list1 = np.arange(start, end + 1, step)
 list1 = pd.Series(list1)
 list2 = pd.Series(list2)
 

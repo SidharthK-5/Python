@@ -5,7 +5,7 @@ Take a string input and create a Pandas Series in that name
 
 import pandas as pd
 
-alphabets = 'abcedfghijklmnopqrstuvwxyz'
+alphabets = "abcedfghijklmnopqrstuvwxyz"
 alphabets_list = list(alphabets)
 
 # Input series name from STDIN
@@ -15,8 +15,8 @@ name = series.rename(series_name)
 
 # Print output to STDOUT
 for idx in range(10):
-    print(idx, alphabets_list[idx], sep='     ')
+    print(idx, alphabets_list[idx], sep="     ")
 for idx in range(10, 26):
-    print(idx, alphabets_list[idx], sep='    ')
+    print(idx, alphabets_list[idx], sep="    ")
 
 print(f"Name: {series_name}, dtype: {series.dtype}")

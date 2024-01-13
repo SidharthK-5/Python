@@ -11,7 +11,9 @@ for entity in range(num_entities):
 
 # Create dataframe from input details
 dataframe = pd.DataFrame(details, index=["Name", "Age", "Marks", "Country"]).T
-dataframe["Marks"] = dataframe["Marks"].astype(int) # Convert 'Marks' column to int type
+dataframe["Marks"] = dataframe["Marks"].astype(
+    int
+)  # Convert 'Marks' column to int type
 
 # Calculate Result based on mean 'Marks' and add the column to dataframe
 Result = [1.0 if i <= dataframe["Marks"].mean() else 0.0 for i in dataframe["Marks"]]

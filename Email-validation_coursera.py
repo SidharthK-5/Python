@@ -5,7 +5,7 @@
 
 import re
 
-inputs = ['ro$g45@gmail.com', 'r_duke78o@outlook.coma', 's.rog78o@outlook.com']
-regex = '^(\w|\.|\-|\_)+[@]\w+[\.]\w{2,3}$'
+inputs = ["ro$g45@gmail.com", "r_duke78o@outlook.coma", "s.rog78o@outlook.com"]
+regex = "^(\w|\.|\-|\_)+[@]\w+[\.]\w{2,3}$"
 
 print([re.fullmatch(regex, x) for x in inputs])

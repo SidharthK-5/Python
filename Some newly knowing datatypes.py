@@ -1,10 +1,10 @@
-'Some newly knowing datatypes'
-#set and complex
+"Some newly knowing datatypes"
+# set and complex
 
-#set
-s = {1,2,3,4,5}
+# set
+s = {1, 2, 3, 4, 5}
 print(s)
 
-#complex
+# complex
 c = 4 + 3j
 print(c)

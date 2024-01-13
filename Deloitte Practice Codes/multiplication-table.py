@@ -10,6 +10,6 @@ for number in range(no_of_tables):
     numbers.append(int(input()))
 
 for number in numbers:
-    for i in range(1,11):
-        print("{} x {} = {}".format(number, i, number*i))
+    for i in range(1, 11):
+        print("{} x {} = {}".format(number, i, number * i))
     print("===============")

@@ -5,6 +5,7 @@
 
 import re
 
+
 def fun(s):
     # return True if s is a valid email, else return False
     email = re.compile("^(\w|\-)+[@][a-zA-Z0-9]+[\.][a-zA-Z]{,3}$")
@@ -13,11 +14,13 @@ def fun(s):
     else:
         return False
 
+
 def filter_mail(emails):
     # filter is a function to select values from an iterator, based on true or false condition of a function. Function can be lambda
     return list(filter(fun, emails))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     n = int(input())
     emails = []
     for _ in range(n):

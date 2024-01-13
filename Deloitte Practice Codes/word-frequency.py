@@ -2,6 +2,7 @@
 Counts the no. of words in a given string and display in the form of dictionary
 """
 
+
 def count_words(input_string: str) -> dict:
     """
     Counts the no. of words in input_string
@@ -19,9 +20,10 @@ def count_words(input_string: str) -> dict:
             word_counter[word] += 1
         else:
             word_counter[word] = 1
-    
-    #return dictionary object
+
+    # return dictionary object
     return word_counter
+
 
 # Read a string
 input_string = input()

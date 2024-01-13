@@ -7,5 +7,5 @@ for value in numbers:
     else:
         odd_sum += 1
 
-print("Number of even numbers :",even_sum)
-print("Number of odd numbers :",odd_sum)
+print("Number of even numbers :", even_sum)
+print("Number of odd numbers :", odd_sum)

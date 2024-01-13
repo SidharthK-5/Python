@@ -1,4 +1,6 @@
-f = open("input2.txt", "w+") # write creates new file if it doesnt exist. if exists, it overwrites the contents
+f = open(
+    "input2.txt", "w+"
+)  # write creates new file if it doesnt exist. if exists, it overwrites the contents
 f.write("line 1")
 # In w+ mode, we can write as well as read. But file pointer reached the end.
 
@@ -10,16 +12,16 @@ f.write("line 1")
 #       for pos 1 and 2, offset should be 0, else it will give error
 
 print(f.tell())
-f.seek(0,0) # Moves file pointer 0 chara from start
+f.seek(0, 0)  # Moves file pointer 0 chara from start
 print(f.tell())
 content = f.read()
 print(f.tell())
 print(content)
 f.close()
 
-''' w+ and r+
+""" w+ and r+
 w+ re-writes and allows to read
-r+ will read without re-writing, but allows to add more content'''
+r+ will read without re-writing, but allows to add more content"""
 f = open("input2.txt", "r+")
 print(f.read())
 f.write("\n\nNewline added")
@@ -28,5 +30,5 @@ f.close()
 
 """ a and a+
 The file pointer will be at the end by default, whereas in r and w, file pointer is at the start"""
-f = open("input2.txt", 'a+') # a+ can append and read
+f = open("input2.txt", "a+")  # a+ can append and read
 f.write("\n\nLast line")

@@ -7,7 +7,7 @@ import pandas as pd
 rows, cols = map(int, input().split())
 input_list = input().split()
 
-if rows*cols == len(input_list):
+if rows * cols == len(input_list):
     # Matrix order is statisfied
     data = dict()
     for i in range(rows):

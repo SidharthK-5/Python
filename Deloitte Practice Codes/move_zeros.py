@@ -3,6 +3,7 @@ Read the no. of digits and the digits of an integer from input
 Move all occurences of zero to the right of the integer and print it as a list
 """
 
+
 def move_zeros(digits_list: list[int]) -> list[int]:
     """
     Moves all zeros in the integer list to right
@@ -17,9 +18,10 @@ def move_zeros(digits_list: list[int]) -> list[int]:
     while 0 in digits_list:
         digits_list.remove(0)
         count += 1
-    digits_list.extend([0]*count)
+    digits_list.extend([0] * count)
     return digits_list
-        
+
+
 # Read the variable from STDIN
 a = int(input())
 digits_list = []

@@ -13,15 +13,15 @@ odd = []
 even = []
 
 for i in S:
-    if ord(i) in range(97,123):
+    if ord(i) in range(97, 123):
         small.append(i)
-    elif ord(i) in range(65,91):
+    elif ord(i) in range(65, 91):
         caps.append(i)
-    elif ord(i) in range(48,58):
+    elif ord(i) in range(48, 58):
         if ord(i) % 2 == 1:
             odd.append(i)
         else:
             even.append(i)
 
 ginortS = sorted(small) + sorted(caps) + sorted(odd) + sorted(even)
-print(''.join(ginortS))
+print("".join(ginortS))

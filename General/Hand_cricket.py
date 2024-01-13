@@ -4,9 +4,10 @@ A hand cricket game between user and computer
 
 import random
 
-num_options = [1,2,3,4,5,6]
-toss_options = ['ODD', 'EVEN']
-player_role = ['BAT', 'BALL']
+num_options = [1, 2, 3, 4, 5, 6]
+toss_options = ["ODD", "EVEN"]
+player_role = ["BAT", "BALL"]
+
 
 def choice() -> int:
     """
@@ -23,6 +24,7 @@ def choice() -> int:
             break
     return user_choice
 
+
 def toss() -> str:
     """
     Lets the user choose toss option ODD/EVEN
@@ -31,12 +33,13 @@ def toss() -> str:
         str: chosen toss value by user
     """
     while True:
-        user_toss=input("Choose \'ODD\' or \'EVEN\': ").upper()
+        user_toss = input("Choose 'ODD' or 'EVEN': ").upper()
         if user_toss not in toss_options:
             print("Invalid Input!! \nRe-enter your toss: ")
         else:
             break
     return user_toss
+
 
 def role_selection(role: str) -> str:
     """
@@ -48,10 +51,11 @@ def role_selection(role: str) -> str:
     Returns:
         str: 2nd player role
     """
-    if role == 'BAT':
-        return 'BALL'
+    if role == "BAT":
+        return "BALL"
     else:
-        return 'BAT'
+        return "BAT"
+
 
 def compare_choice(toss_result: str, user_toss: str) -> list[str]:
     """
@@ -78,6 +82,7 @@ def compare_choice(toss_result: str, user_toss: str) -> list[str]:
 
     return [user_role, comp_role]
 
+
 def first_batting(player: str) -> int:
     """
     Handles the first batting logic
@@ -86,22 +91,23 @@ def first_batting(player: str) -> int:
         player (str): player who is batting 1st
 
     Returns:
-        int: runs score in first batting 
+        int: runs score in first batting
     """
     runs = 0
     while True:
         comp_choice = random.choice(num_options)
         user_choice = choice()
         print(f"Computer chose: {comp_choice}")
-        if comp_choice != user_choice and player == 'user':
+        if comp_choice != user_choice and player == "user":
             runs += user_choice
-        elif comp_choice != user_choice and player == 'computer':
+        elif comp_choice != user_choice and player == "computer":
             runs += comp_choice
         else:
             print(f"\n{player.upper()} is out. Innings over!!!\n")
             break
         print(f"{player.upper()} score: {runs}")
     return runs
+
 
 def second_batting(player: str, prev_score: int) -> None:
     """
@@ -112,21 +118,21 @@ def second_batting(player: str, prev_score: int) -> None:
         prev_score (int): runs scored by 1st batted player
     """
     runs = 0
-    p2_status = True # tracks the win status of 2nd batting player
+    p2_status = True  # tracks the win status of 2nd batting player
     while runs <= prev_score:
         comp_choice = random.choice(num_options)
         user_choice = choice()
         print(f"Computer chose: {comp_choice}")
-        if comp_choice != user_choice and player == 'user':
+        if comp_choice != user_choice and player == "user":
             runs += user_choice
-        elif comp_choice != user_choice and player == 'computer':
+        elif comp_choice != user_choice and player == "computer":
             runs += comp_choice
         else:
             p2_status = False
             if runs == prev_score:
                 print("Match draw...")
             else:
-                if player == 'user':
+                if player == "user":
                     print("\nComputer won the game")
                 else:
                     print("\nUser won the game")
@@ -135,7 +141,8 @@ def second_batting(player: str, prev_score: int) -> None:
 
     if p2_status is True:
         print(f"{player.upper()} won the game")
-    
+
+
 def play(user: str):
     """
     Running logic of the game
@@ -144,36 +151,38 @@ def play(user: str):
         user (str): role assigned to the user
     """
     # Player 1 batting
-    if user == 'BAT':
-        user_score = first_batting(player='user')
+    if user == "BAT":
+        user_score = first_batting(player="user")
         print("User score: ", user_score)
         print(f"Computer needs {user_score+1} runs to win\n")
-        user = 'BALL'
+        user = "BALL"
     else:
-        comp_score = first_batting(player='computer')
+        comp_score = first_batting(player="computer")
         print("Computer score: ", comp_score)
         print(f"User needs {comp_score+1} runs to win\n")
-        user = 'BAT'
+        user = "BAT"
 
     # Player 2 batting
-    if user == 'BAT':
-        second_batting(player='user', prev_score=comp_score)
+    if user == "BAT":
+        second_batting(player="user", prev_score=comp_score)
     else:
-        second_batting(player='computer', prev_score=user_score)
+        second_batting(player="computer", prev_score=user_score)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("\nToss begins...\n")
     user_toss = toss()
     user_choice = choice()
     comp_choice = random.choice(num_options)
     print(f"Computer chose: {comp_choice}")
-    toss_value = user_choice + comp_choice # tosss_value decides whether user/computer won the toss
+    toss_value = (
+        user_choice + comp_choice
+    )  # tosss_value decides whether user/computer won the toss
 
     if toss_value % 2 == 0:
-        roles = compare_choice('EVEN', user_toss)
+        roles = compare_choice("EVEN", user_toss)
     else:
-        roles = compare_choice('ODD', user_toss)
+        roles = compare_choice("ODD", user_toss)
 
     user_role, comp_role = roles[0], roles[1]
     play(user_role)

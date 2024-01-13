@@ -11,10 +11,12 @@ N = int(input())
 while N > 0:
     num = input()
     # Check match of card and num && search consecutive repitition of same no more than 3, with optional '-' seperator
-    if re.match(card, num) and not(re.search(r'([0-9])(-?\1){3}', num)): # -? is put in paranthesis with \1 means - can be optional inside 1st group
+    if re.match(card, num) and not (
+        re.search(r"([0-9])(-?\1){3}", num)
+    ):  # -? is put in paranthesis with \1 means - can be optional inside 1st group
         result.append("Valid")
     else:
         result.append("Invalid")
     N -= 1
 
-print('\n'.join(result))
+print("\n".join(result))

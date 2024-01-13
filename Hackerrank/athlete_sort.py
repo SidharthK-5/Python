@@ -5,7 +5,7 @@ In the final result, the sub lists will be sorted in the outer list based on k't
 
 from operator import itemgetter
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     n, m = map(int, input().split())
 
     arr = []

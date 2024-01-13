@@ -8,11 +8,11 @@ Adding ? at the end will solve this
 .*? looks for least no of occurences. So this can limit occurences to 0 if possible - Non greediness
 """
 
-text = 'abcdefgfujhg'
+text = "abcdefgfujhg"
 print(re.findall("ab.*?", text))
 
-text = 'peter piper picked a peck of pickled peppers'
-print(re.findall('p.*?e.*?r', text))
+text = "peter piper picked a peck of pickled peppers"
+print(re.findall("p.*?e.*?r", text))
 
 """
 Problem 1
@@ -20,18 +20,18 @@ find a string starting with crypto amd ending with coinm with atmost 30 chara in
 """
 
 text = "crypto-bot that is trading Bitcoin and other currencies"
-print(re.match('crypto(.{1,30})coin', text))
+print(re.match("crypto(.{1,30})coin", text))
 
 """
 Problem 2
 Given a string. Find all dollar amounts with optional RegEx decimal values
 """
 
-text = '''If you invested $1 in the year 1801, you would have $18087791.41 today. This is a 7.967% return on investment. But if you invested only $0.25 in 1801, you would end up with $4521947.8525.'''
+text = """If you invested $1 in the year 1801, you would have $18087791.41 today. This is a 7.967% return on investment. But if you invested only $0.25 in 1801, you would end up with $4521947.8525."""
 # the whole price value is taken as a group and the decimal part is taken as a sub group
 # so even if there is no decimal part, price will be captured.
 # o/p (whole price, decimal part)
-print(re.findall('(\$[0-9]+(\.[0-9]+)?)', text))
+print(re.findall("(\$[0-9]+(\.[0-9]+)?)", text))
 
 """
 Problem 3
@@ -40,10 +40,12 @@ Replace Alice Wonderland with 'Alice Doe', but not to replace occurences of 'Ali
 # Negative lookahead ?!
 # If -ve lookahead is given before a character, it will search for that character before the occurence of regex pattern
 
-text = '''
+text = """
 Alice Wonderland married to John Doe.
 The new name of former 'Alice Wonderland' is Alice Doe.
 Alice Wonderland replaces her old name 'Wonderland' with 'Doe'.
 Alice's sister Jane Wonderland still keeps her old name.
-'''
-print(re.sub("Alice Wonderland(?!')", 'Alice Doe', text)) # -ve lookahead checks for the occurence of ' b4 Alice Wonderland. If found, sub() wont be applied.
+"""
+print(
+    re.sub("Alice Wonderland(?!')", "Alice Doe", text)
+)  # -ve lookahead checks for the occurence of ' b4 Alice Wonderland. If found, sub() wont be applied.

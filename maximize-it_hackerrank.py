@@ -7,9 +7,9 @@ for _ in range(k):
 
 for i in range(len(lists)):
     for j in range(len(lists[i])):
-        lists[i][j] = (lists[i][j]**2) % m
+        lists[i][j] = (lists[i][j] ** 2) % m
 
-S = 0    
+S = 0
 for l in lists:
     S += max(l)
 

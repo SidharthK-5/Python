@@ -3,14 +3,14 @@ from traceback import print_tb
 
 handle = open("json_input.json", "r")
 content = handle.read()
-#print(content)
+# print(content)
 handle.close()
 
 d = json.loads(content)
-print(d['database']['port'])
+print(d["database"]["port"])
 
-d['database']['port'] = 3330
-d['files']['log'] = ('/log/app.log','/log/mysql/app.log' )
+d["database"]["port"] = 3330
+d["files"]["log"] = ("/log/app.log", "/log/mysql/app.log")
 print(d)
 
 handle = open("json_output.json", "w")

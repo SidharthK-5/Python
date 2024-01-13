@@ -10,6 +10,6 @@ print("\n\n")
 
 # To avoid close(), we can use "with" statement
 # with is called context manager since it avoids creating a file variable and need for closing
-with open("data/sample_file.txt", 'r') as temp_file:
+with open("data/sample_file.txt", "r") as temp_file:
     rf = temp_file.read()
 print(rf)
