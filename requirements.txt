@@ -5,3 +5,4 @@ statistics
 matplotlib
 black==21.12b0
 click==8.0.1
+black[jupyter]
