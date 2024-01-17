@@ -1,5 +1,5 @@
 # Square dict
-d = {x: x ** 2 for x in range(1, 6)}
+d = {x: x**2 for x in range(1, 6)}
 print(d)
 
 # ASCII dict

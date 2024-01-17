@@ -1,5 +1,5 @@
 def sq(n):
-    return n ** 2
+    return n**2
 
 
 def add(n1, n2):

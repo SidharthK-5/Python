@@ -1,5 +1,6 @@
 import random
 
+
 # Default argument
 def gen_password(length=8):  # Setting default value of legth as 8
     l = ["@", "#", "$", "&"]
@@ -15,6 +16,7 @@ def gen_password(length=8):  # Setting default value of legth as 8
 
 result = gen_password()
 print(result)
+
 
 # Keyword Argument
 def validate(username, password):
