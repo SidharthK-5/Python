@@ -8,7 +8,7 @@ def add(first, second):
 
 
 def get_sum_of_squares(first, second):
-    return first**2 + second**2
+    return first ** 2 + second ** 2
 
 
 print(add(3, 5))

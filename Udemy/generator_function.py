@@ -32,7 +32,7 @@ print("\nList comprehension and Generator function")
 # Generator concept in comprehension
 list_1 = [10, 20, 30, 40, 50]
 list_2 = (
-    value**2 for value in list_1
+    value ** 2 for value in list_1
 )  # Giving () instead of [] in comprehension will create a generator object list_2
 for _ in range(len(list_1)):
     print(next(list_2))

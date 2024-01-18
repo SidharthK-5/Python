@@ -1,7 +1,7 @@
 # map()
 l = [10, 20, 30, 40, 50]
 l1 = list(
-    map(lambda n: n**2, l)
+    map(lambda n: n ** 2, l)
 )  # This lambda calculates square of every element from 'l'
 print(l1)
 

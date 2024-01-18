@@ -25,13 +25,13 @@ class Complex(object):
         # Division = (a*c + b*d)/(c**2 + d**2) + [(c*b - a*d)/(c**2 + d**2)]i
         return Complex(
             (self.real * no.real + self.imaginary * no.imaginary)
-            / (no.real**2 + no.imaginary**2),
+            / (no.real ** 2 + no.imaginary ** 2),
             (no.real * self.imaginary - self.real * no.imaginary)
-            / (no.real**2 + no.imaginary**2),
+            / (no.real ** 2 + no.imaginary ** 2),
         )
 
     def mod(self):
-        return Complex((math.sqrt(self.real**2 + self.imaginary**2)), 0)
+        return Complex((math.sqrt(self.real ** 2 + self.imaginary ** 2)), 0)
 
     # str() is the convert_to_string function
     def __str__(self):
