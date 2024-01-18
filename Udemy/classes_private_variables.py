@@ -2,6 +2,7 @@
 Class variables with __ infront of them are private. They cannot be accessed outside the class
 """
 
+
 class Account:
     # Class variable creation
     count = 0
@@ -66,10 +67,10 @@ customer2.deposite(5000)
 customer3.deposite(10000)
 customer4.deposite(50000)
 
-l = [customer1, customer2, customer3, customer4]
-for obj in l:
-    if obj.get_balance() < 10000: # Min balance is set as 10000
-        print(obj.get_id(), obj.get_name())
+customer_list = [customer1, customer2, customer3, customer4]
+for customer in customer_list:
+    if customer.get_balance() < 10000:  # Min balance is set as 10000
+        print(customer.get_id(), customer.get_name())
 
 print(Account.count)
 print(customer1.count)
