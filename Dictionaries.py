@@ -24,7 +24,7 @@ for key in d:
 
 d1 = {}
 for value in range(1, 11):
-    d1[value] = value ** 2
+    d1[value] = value**2
 print(d1)
 
 print("\nkeys() :", d.keys())
