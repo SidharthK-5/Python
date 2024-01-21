@@ -1,3 +1,16 @@
+"""
+Given two complex numbers 'C' and 'D'. Perform the following operations with C and D
+C+D
+C-D
+C*D
+C/D
+mod(C)
+mod(D)
+
+Input will be real and imaginary parts of the complex numbers
+Display the output in separate lines
+"""
+
 import math
 
 
@@ -52,12 +65,12 @@ class Complex(object):
 
 
 if __name__ == "__main__":
-    c = map(float, input().split())
-    d = map(float, input().split())
-    x = Complex(
-        *c
+    C = map(float, input().split())
+    D = map(float, input().split())
+    X = Complex(
+        *C
     )  # c is a list. Instead of passing the whole list, the address of 0th element is passed as pointer
-    y = Complex(*d)
+    Y = Complex(*D)
     print(
-        *map(str, [x + y, x - y, x * y, x / y, x.mod(), y.mod()]), sep="\n"
+        *map(str, [X + Y, X - Y, X * Y, X / Y, X.mod(), Y.mod()]), sep="\n"
     )  # *map denotes that it is used as pointer
