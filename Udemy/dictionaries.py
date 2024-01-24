@@ -30,6 +30,13 @@ print(d1)
 print("\nkeys() :", d.keys())
 print("values() :", d.values())
 print("items() :", d.items())  # Prints a tuple of items
-# Another method to print items as tuple
+
+# Print tuple items in loop
+print("\nPrint tuple items as it is")
 for t in d.items():
     print(t, end="\t")
+    
+# Unpacking tuple items as key-value pairs
+print("\n\nUnpacking tuple items as key-value pairs")
+for key, value in d.items():
+    print(key, value)
