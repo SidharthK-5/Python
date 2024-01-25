@@ -35,7 +35,7 @@ print("items() :", d.items())  # Prints a tuple of items
 print("\nPrint tuple items as it is")
 for t in d.items():
     print(t, end="\t")
-    
+
 # Unpacking tuple items as key-value pairs
 print("\n\nUnpacking tuple items as key-value pairs")
 for key, value in d.items():
