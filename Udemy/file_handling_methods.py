@@ -17,7 +17,7 @@ seek(offset, pos) - moves file pointer from 'pos' with 'offset' no of characters
                   pos - 0 for start of file, 1 for current pos, 2 for end of file
       for pos 1 and 2, offset should be 0, else it will give error
 """
-      
+
 print(f.tell())
 f.seek(0, 0)  # Moves file pointer 0 chara from start
 print(f.tell())
