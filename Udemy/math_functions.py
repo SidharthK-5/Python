@@ -18,8 +18,8 @@ print(f"\nFactorial of 5 is = {math.factorial(5)}")
 # modf function - seperates int and decimal part
 # Returns a tuple (dec,int)
 print(f"\nFractional and decimal parts of 45.556 are: {math.modf(45.5556)}")  # method 1
-fractional, decimal = map(float, math.modf(45.556))  # method 2
-print(f"Parts separated: {decimal=}, {fractional=}")
+fractional, integer = map(float, math.modf(45.556))  # method 2
+print(f"Parts separated: {integer=}, {fractional=}")
 
 # log function
 print("\nLogarithmic functions")
