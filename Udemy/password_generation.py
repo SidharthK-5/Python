@@ -21,6 +21,7 @@ def generated_password(length=8):  # Setting default value of legth as 8
 password = generated_password()
 print(f"Generated password = {password}")
 
+
 def validate_user(username, password):
     if username == "ABC" and password == "Abc@123":
         print("Valid password")
