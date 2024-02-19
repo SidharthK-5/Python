@@ -21,7 +21,9 @@ print("\nappend() method:")
 list_1.append(600)
 print(f"After appending 600, {list_1=}")
 
-print("\nAdd multiple elements using extend() method : ")  # Add multiple elements to a list
+print(
+    "\nAdd multiple elements using extend() method : "
+)  # Add multiple elements to a list
 list_1.extend([700, 800, 900])  # l1 + [700, 800, 900] will work the same
 print(f"After adding [700, 800, 900]: {list_1=}")
 
@@ -43,7 +45,9 @@ list_a = [10, 20, 30]
 list_a1 = list_a.copy()
 print(f"{list_a=}, {id(list_a)=}, {list_a1=}, {id(list_a1)=}")
 list_a.append(40)
-print(f"After appending 40 to list_a:\n{list_a=}, {id(list_a)=}, {list_a1=}, {id(list_a1)=}")
+print(
+    f"After appending 40 to list_a:\n{list_a=}, {id(list_a)=}, {list_a1=}, {id(list_a1)=}"
+)
 
 print("\nupdate method:")
 list_b = [10, 20, 300, 40, 50]
