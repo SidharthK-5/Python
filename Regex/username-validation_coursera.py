@@ -1,5 +1,7 @@
-# Username validation
-# username can contain only alphabets, _ and .
+"""
+Username validation
+username can contain only alphabets, _ and .
+"""
 
 import re
 
