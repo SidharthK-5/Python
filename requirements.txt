@@ -7,3 +7,4 @@ black
 click
 black[jupyter]
 xmltodict
+openpyxl
