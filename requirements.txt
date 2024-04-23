@@ -8,3 +8,5 @@ click
 black[jupyter]
 xmltodict
 openpyxl
+SpeechRecognition
+pyaudio
