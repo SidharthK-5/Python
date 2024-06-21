@@ -14,7 +14,6 @@ So this can limit occurences to 0 if possible - Non greediness
 import re
 
 
-
 text = "abababcdefabgfujhg"
 pattern = "ab.*?"
 print(f"{pattern=}  {text=}")
@@ -79,6 +78,4 @@ Regex breakdown:
 If found, substitution function wont be applied.
 """
 print(f"\n{pattern=}  {text=}")
-print(
-    re.sub("Alice Wonderland(?!')", "Alice Doe", text)
-)
+print(re.sub("Alice Wonderland(?!')", "Alice Doe", text))
