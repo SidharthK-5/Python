@@ -22,5 +22,5 @@ for customer_need in range(num_of_customers):
         # Update the total cost and reduce the available shoes
         total_cost += price
         available_shoes[str(size)] -= 1
-    
+
 print(total_cost)
