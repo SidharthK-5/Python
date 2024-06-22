@@ -48,7 +48,7 @@ def name_format(person: tuple[str, str, int, str]) -> str:
     A formatting function that formats a person's name based on their gender and name.
 
     Args:
-        person (Tuple[str, str, int, str]): The details of the person.
+        person (tuple[str, str, int, str]): The details of the person.
 
     Returns:
         str: The formatted name of the person.
