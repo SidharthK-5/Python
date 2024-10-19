@@ -1,25 +1,21 @@
 """
-WIP: detect_html_tags.py
+Given an HTML code snippet of N lines.
+Task is to detect and print all the HTML tags, attributes and attribute values.
 """
 
-import re
+from html.parser import HTMLParser
 
-pattern = r'<(\w+)(.*?)>'
-N = int(input())
-html = "".join(input() for _ in range(N))
-matches = re.findall(r'<!--.*?-->|<(\w+)(.*?)>', html, re.DOTALL)
 
-for match in matches:
-    tag = match[0]
-    attributes = match[1]
-    if tag:
+class HTMLTagParser(HTMLParser):
+    def handle_starttag(self, tag, att):
         print(tag)
-    if attributes:
-        individual_attributes = attributes.split()
-        for attribute in individual_attributes:
-            print(f"{attribute=}")
-            try:
-                key, value = attribute.split('=')
-                print("-> " + key + " > " + value.strip('"').strip("'").strip("/").strip('"').strip("'"))
-            except ValueError:
-                pass
+        self.print_atributes(att)
+
+    def print_atributes(self, att):
+        for name, val in att:
+            print(f"-> {name} > {val}")
+
+
+parser = HTMLTagParser()
+for _ in range(int(input())):
+    parser.feed(input())
