@@ -10,3 +10,4 @@ xmltodict
 openpyxl
 SpeechRecognition
 pyaudio
+ipykernel
