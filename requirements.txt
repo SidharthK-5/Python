@@ -12,3 +12,4 @@ SpeechRecognition
 pyaudio
 ipykernel
 pillow
+gmplot
