@@ -1,9 +1,10 @@
 import numpy
 
-game_board = numpy.array([['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']])
+game_board = numpy.array([["_", "_", "_"], ["_", "_", "_"], ["_", "_", "_"]])
 
-player_one_symbol = 'X'
-player_two_symbol = 'O'
+player_one_symbol = "X"
+player_two_symbol = "O"
+
 
 def check_rows(symbol):
     for row in range(3):
@@ -28,9 +29,17 @@ def check_cols(symbol):
 
 
 def check_diagonals(symbol):
-    if game_board[0][2] == game_board[1][1] and game_board[1][1] == game_board[2][0] and game_board[1][1] == symbol:
+    if (
+        game_board[0][2] == game_board[1][1]
+        and game_board[1][1] == game_board[2][0]
+        and game_board[1][1] == symbol
+    ):
         return True
-    elif game_board[0][0] == game_board[1][1] and game_board[1][1] == game_board[2][2] and game_board[1][1] == symbol:
+    elif (
+        game_board[0][0] == game_board[1][1]
+        and game_board[1][1] == game_board[2][2]
+        and game_board[1][1] == symbol
+    ):
         return True
     return False
 
@@ -45,17 +54,23 @@ def place_symbol(symbol):
     while True:
         row = int(input("Enter row: 1, 2 or 3: "))
         col = int(input("Enter column: 1, 2 or 3: "))
-        if row>0 and row<4 and col>0 and col<4 and game_board[row-1][col-1] == '_':
+        if (
+            row > 0
+            and row < 4
+            and col > 0
+            and col < 4
+            and game_board[row - 1][col - 1] == "_"
+        ):
             break
         else:
             print("Invalid input. Please enter correct input again")
 
-    game_board[row-1][col-1] = symbol
+    game_board[row - 1][col - 1] = symbol
 
 
 def play():
     for turn in range(9):
-        if turn%2 == 0:
+        if turn % 2 == 0:
             print("\nX's turn")
             place_symbol(player_one_symbol)
             if won(player_one_symbol):
@@ -67,9 +82,10 @@ def play():
             if won(player_two_symbol):
                 print("\n'O' WON...")
                 break
-    
-    if not(won(player_one_symbol)) and not(won(player_two_symbol)):
+
+    if not (won(player_one_symbol)) and not (won(player_two_symbol)):
         print("\nMATCH DRAW...")
+
 
 if __name__ == "__main__":
     play()

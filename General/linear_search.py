@@ -2,6 +2,7 @@
 Program to search for a number in a list using linear search
 """
 
+
 def linear_search(array, target):
     """
     Perform a linear search on the given array to find the target value.
@@ -17,6 +18,7 @@ def linear_search(array, target):
         if array[i] == target:
             return i
     return -1
+
 
 if __name__ == "__main__":
     array = list(map(int, input("Enter the list of numbers: ").split()))

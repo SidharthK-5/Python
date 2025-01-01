@@ -2,7 +2,6 @@
 Guess the movie name from the given code
 """
 
-
 import random
 
 MOVIES = [

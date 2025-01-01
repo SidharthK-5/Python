@@ -1,11 +1,13 @@
 from fractions import Fraction
 from functools import reduce
 
+
 def product(fracs):
     t: Fraction = reduce(lambda x, y: x * y, fracs)
     return t.numerator, t.denominator
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     fracs = []
     for _ in range(int(input())):
         # Convert the space-separated string into a Fraction object

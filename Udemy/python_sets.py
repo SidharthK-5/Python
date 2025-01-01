@@ -7,6 +7,7 @@ All the elements should be unique
 Immutabe elements in the set - int, float, tuple, str
 Unordered
 """
+
 sample_set = {10, 20, 30, 40, 50}
 print(f"{sample_set=}")
 

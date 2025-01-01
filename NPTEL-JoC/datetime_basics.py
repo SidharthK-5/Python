@@ -2,7 +2,6 @@
 Basics of datetime module
 """
 
-
 import datetime
 
 

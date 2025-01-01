@@ -2,6 +2,7 @@
 Program to perform binary serach using recursion
 """
 
+
 def binary_search(array, low, high, key):
     if low <= high:
         mid = (low + high) // 2
@@ -13,7 +14,7 @@ def binary_search(array, low, high, key):
             return binary_search(array, mid + 1, high, key)
     else:
         return -1
-    
+
 
 if __name__ == "__main__":
     array = list(map(int, input("Enter the array elements: ").split()))

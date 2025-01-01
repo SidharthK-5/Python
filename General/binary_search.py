@@ -2,6 +2,7 @@
 Program to perform binary search on a sorted list
 """
 
+
 def binary_search(array, search_key):
     """
     Perform a binary search on a sorted array to find the index of a given search key.

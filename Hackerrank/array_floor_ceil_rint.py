@@ -4,7 +4,8 @@ Print the floor, ceil and rint of the array.
 """
 
 import numpy as np
-np.set_printoptions(legacy='1.13')  # O/p format as specified in the task
+
+np.set_printoptions(legacy="1.13")  # O/p format as specified in the task
 
 A = np.array(input().split(), float)
 

@@ -4,7 +4,6 @@ The program generates a list of day-of-year of 50 people (50 numbers)
 From the list, matching day-of-year are declared as twins
 """
 
-
 import datetime
 import random
 

@@ -6,7 +6,6 @@ Criteria:
 2. There should not be more than 1 alternating repeatition of digits
 """
 
-
 import re
 
 

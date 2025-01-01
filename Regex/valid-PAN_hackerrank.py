@@ -2,7 +2,6 @@
 Program to find valid PAN number from a given no. of inputs
 """
 
-
 import re
 
 N = int(input())
