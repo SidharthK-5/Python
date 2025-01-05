@@ -13,3 +13,4 @@ pyaudio
 ipykernel
 pillow
 gmplot
+opencv-python
