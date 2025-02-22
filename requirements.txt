@@ -14,3 +14,4 @@ ipykernel
 pillow
 gmplot
 opencv-python
+nltk
