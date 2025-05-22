@@ -6,6 +6,7 @@ This is a simple rock-paper-scissors game that allows the user to play against t
 import random
 
 # Graphical representation of the symbols
+# Art taken from https://ascii.co.uk/art
 rock = r"""
                 _    
                | |   
