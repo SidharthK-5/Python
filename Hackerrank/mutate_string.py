@@ -1,7 +1,7 @@
 """
 Question:
 Given a string, a character and index position
-Place character at index position of string 
+Place character at index position of string
 """
 
 

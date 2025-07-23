@@ -7,7 +7,7 @@ Find valid credit card numbers that follow the below criteria
     4. in groups of 4
     5. contains only '-' as seperator between groups or there should not be any separator
     6. should not have 4 or more consecutive repeating characters
-    
+
 """
 
 import re

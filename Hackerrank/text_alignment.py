@@ -1,6 +1,6 @@
 """
 Creating a Hackerrank logo using character 'H'
-Replaced all ______ with rjust, ljust or center suitably. 
+Replaced all ______ with rjust, ljust or center suitably.
 """
 
 thickness = int(input())  # This must be an odd number

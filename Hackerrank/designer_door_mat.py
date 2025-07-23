@@ -4,7 +4,7 @@ Question: Create a desginer mat with the following criteria
 2. The design should have 'WELCOME' written in the center.
 3. The design pattern should only use |, . and - characters.
 
-Sample Size: 7 x 21 
+Sample Size: 7 x 21
     ---------.|.---------
     ------.|..|..|.------
     ---.|..|..|..|..|.---
@@ -12,7 +12,7 @@ Sample Size: 7 x 21
     ---.|..|..|..|..|.---
     ------.|..|..|.------
     ---------.|.---------
-    
+
 """
 
 # Read N and M
