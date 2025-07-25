@@ -1,6 +1,6 @@
 import random
 
-from art import logo
+from art import blackjack_logo
 
 
 def deal_card():
@@ -46,7 +46,7 @@ def play_blackjack():
     user_cards = [deal_card() for _ in range(2)]
     computer_cards = [deal_card() for _ in range(2)]
 
-    print(logo)
+    print(blackjack_logo)
 
     while not is_game_over:
         user_score = calculate_score(user_cards)
