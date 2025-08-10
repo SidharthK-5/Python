@@ -9,9 +9,10 @@ black[jupyter]
 xmltodict
 openpyxl
 SpeechRecognition
-pyaudio
+# pyaudio
 ipykernel
 pillow
 gmplot
 opencv-python
 nltk
+colorgram.py
