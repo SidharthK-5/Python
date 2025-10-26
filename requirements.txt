@@ -16,3 +16,4 @@ gmplot
 opencv-python
 nltk
 colorgram.py
+networkx
